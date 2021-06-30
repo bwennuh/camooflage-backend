@@ -64,7 +64,8 @@ end
 puts "Creating categories 🥛 🧀 🥯"
 10.times do
   Category.create(
-    name: Faker::Food.ingredient
+    name: Faker::Food.ingredient,
+    product_type: "non-dairy product"
   )
 end
 
