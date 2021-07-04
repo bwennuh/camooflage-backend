@@ -12,22 +12,20 @@ class UsersController < ApplicationController
     render json: @user
   end
 
-  # def new
-  #   @user = User.new
-  # end
+  def new
+    @user = User.new
+  end
 
-  # def create
-  #   user = User.create!(user_params)
+  def create
+    user = User.create!(user_params)
 
-  #   render json: user
-
-  #   # if user.valid?
-  #   #   render json: user
-  #   # else
-  #   #   flash[:errors] = user.errors.full_messages
-  #   #   render json: flash[:errors]
-  #   # end
-  # end
+    if user.valid?
+      render json: user
+    else
+      flash[:errors] = user.errors.full_messages
+      render json: flash[:errors]
+    end
+  end
 
   # def destroy
   #     user = User.find(params[:id])
