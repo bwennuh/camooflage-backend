@@ -46,8 +46,8 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.permit!
-    # params.permit(:name, :description, :user_id)
+    # params.permit!
+    params.permit(:name, :description, :user_id)
   end
 
 end

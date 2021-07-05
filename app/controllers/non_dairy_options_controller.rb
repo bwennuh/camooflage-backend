@@ -46,8 +46,8 @@ class NonDairyOptionsController < ApplicationController
   private
 
   def non_dairy_option_params
-    params.permit!
-    # params.permit(:name, :description)
+    # params.permit!
+    params.permit(:name, :description, :allergens, :image, :category_id, :brand_id)
   end
 
 end
