@@ -27,19 +27,19 @@ class BoardsController < ApplicationController
     end
   end
 
-  # def destroy
-  #     board = Board.find(params[:id])
-  #     board.destroy!
+  def destroy
+      board = Board.find(params[:id])
+      board.destroy!
 
-  #     render json: {}
-  # end
+      render json: {}
+  end
 
-  # def update
-  #     board = Board.find(params[:id])
-  #     board.update(board_params)
+  def update
+      board = Board.find(params[:id])
+      board.update(board_params)
 
-  #     render json: board
-  # end
+      render json: board
+  end
 
   private
 
