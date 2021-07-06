@@ -12,22 +12,20 @@ class BoardsController < ApplicationController
     render json: @board
   end
 
-  # def new
-  #   @board = Board.new
-  # end
+  def new
+    @board = Board.new
+  end
 
-  # def create
-  #   board = Board.create!(board_params)
+  def create
+    board = Board.create!(board_params)
 
-  #   render json: board
-
-  #   # if board.valid?
-  #   #   render json: board
-  #   # else
-  #   #   flash[:errors] = board.errors.full_messages
-  #   #   render json: flash[:errors]
-  #   # end
-  # end
+    if board.valid?
+      render json: board
+    else
+      flash[:errors] = board.errors.full_messages
+      render json: flash[:errors]
+    end
+  end
 
   # def destroy
   #     board = Board.find(params[:id])
@@ -46,7 +44,6 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    # params.permit!
     params.permit(:name, :description, :user_id)
   end
 
