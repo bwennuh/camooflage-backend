@@ -27,19 +27,19 @@ class BoardPinsController < ApplicationController
     end
   end
 
-  # def destroy
-  #     board_pin = BoardPin.find(params[:id])
-  #     board_pin.destroy!
+  def destroy
+      board_pin = BoardPin.find(params[:id])
+      board_pin.destroy!
 
-  #     render json: {}
-  # end
+      render json: {}
+  end
 
-  # def update
-  #     board_pin = BoardPin.find(params[:id])
-  #     board_pin.update(board_pin_params)
+  def update
+      board_pin = BoardPin.find(params[:id])
+      board_pin.update(board_pin_params)
 
-  #     render json: board_pin
-  # end
+      render json: board_pin
+  end
 
   private
 
