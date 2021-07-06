@@ -46,8 +46,7 @@ class BoardPinsController < ApplicationController
   private
 
   def board_pin_params
-    params.permit!
-    # params.permit(:non_dairy_option_id, :board_id)
+    params.permit(:non_dairy_option_id, :board_id)
   end
 
 end
