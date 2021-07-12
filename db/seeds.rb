@@ -386,12 +386,34 @@ NonDairyOption.create(
 
 # Violife
 NonDairyOption.create(
-  name: "Cheddar Cheese Shreds", 
+  name: "Cheddar Shreds", 
   description: "Just like the bag says - these are just like cheddar shreds, but vegan! Now you can enjoy your nachos with ready delicious Violife just like Cheddar Shreds. A super easy convenient addition to any fridge.", 
   allergens: "coconut",
   recommendations: "These shreds are some of the closest vegan shreds I've found to regular cheese shreds. They go great on tacos, can be mixed with some milk (recommend Oatly's full-fat oat milk here!) for some great easy vegan mac and cheese, and they're also great for grilled cheese!", 
   image: "https://violifefoods.com/wp-content/uploads/2018/12/5150_AW_Violife_USA_Shreds_Cheddar_227g_1.0_550x500.png", 
   link: "https://violifefoods.com/us/product/just-like-cheddar-shreds/", 
+  category_id: 6,
+  brand_id: 2
+)
+
+NonDairyOption.create(
+  name: "Mozzarella Shreds", 
+  description: "Try making your own pizza and use our Violife just like Mozzarella Shreds with fresh tomato puree. For the perfect family meal.", 
+  allergens: "coconut",
+  recommendations: "These shreds are one of the only ones I've found that melts beautifully for pizza. Grab some frozen pizza dough, a jar of your favorite marinara sauce, and a bag of these bad boys and you're golden!", 
+  image: "https://violifefoods.com/wp-content/uploads/2017/07/5148_AW_Violife_US%CE%91_Shreds_Mozzarella_227g_1.0_550x500.png", 
+  link: "https://violifefoods.com/us/product/just-like-mozzarella-shreds/", 
+  category_id: 6,
+  brand_id: 2
+)
+
+NonDairyOption.create(
+  name: "Colby Jack Shreds", 
+  description: "Your favorite flavor to be stirred into casseroles, sprinkled over nachos and tacos! A must have for Taco Tuesday nights!", 
+  allergens: "coconut",
+  recommendations: "Nachos, burritos, tacos, enchiladas - this is the best vegan cheese pairing to go with all of those! Also great for pizzas and pastas if you're trying to add some extra zing!", 
+  image: "https://violifefoods.com/wp-content/uploads/2020/05/5802_AW_USA_Violife_Shreds_ColbyJack_227g_1.0_550x500.png", 
+  link: "https://violifefoods.com/us/product/just-like-colby-jack-shreds/", 
   category_id: 6,
   brand_id: 2
 )
@@ -416,6 +438,129 @@ NonDairyOption.create(
   link: "https://violifefoods.com/us/product/just-like-mature-cheddar-slices/", 
   category_id: 5,
   brand_id: 2
+)
+
+NonDairyOption.create(
+  name: "Smoked Provoline Slices", 
+  description: "Once tried, forever loved. You’ll be eating it straight out of the pack before long! Try it on crackers with a glass of red wine (we think a hearty Rioja goes well) or grilled on your favourite vegan bread.", 
+  allergens: "coconut",
+  recommendations: "Great for any dish that you need some cheese and some additional smokey flavor! Also great for sandwiches and wraps!", 
+  image: "https://violifefoods.com/wp-content/uploads/2017/09/5810_AW_USA_Violife_SS_Smoked_200g_1.0_550x500.png", 
+  link: "https://violifefoods.com/us/product/just-like-smoked-provolone-slices/", 
+  category_id: 5,
+  brand_id: 2
+)
+
+NonDairyOption.create(
+  name: "Feta Block", 
+  description: "Looked to our Greek heritage for inspiration with this flavor, toss in a crispy salad with olives and cherry tomatoes or melt into a Portobello mushroom for a delicious snack.", 
+  allergens: "coconut",
+  recommendations: "This cheese is SO creamy and perfect for pastas, salads, and just eating on its own with some crackers. I was never a huge fan of regular feta, but I could eat this stuff straight out of the package!", 
+  image: "https://violifefoods.com/wp-content/uploads/2018/04/5807_AW_USA_Violife_BLK_Feta_200g_95x110mm_73x85mm_1.0_550x500.png", 
+  link: "https://violifefoods.com/us/product/just-like-feta-block/", 
+  category_id: 7,
+  brand_id: 2
+)
+
+NonDairyOption.create(
+  name: "Parmesan Wedge", 
+  description: "For those who want a little Italian authenticity on their pasta or crackers, now you can have the flavour without the dairy or gluten. Delizioso!", 
+  allergens: "coconut",
+  recommendations: "As someone who used to dump loads of parmesan cheese on anything I ate, I highly recommend this parm for everything! Great in larger chunks on salad, or shredded on top of pizza or pasta! Make some kale pesto sauce at home overtop of some penne with some shredded Violife Parm and you've got a perfectly simple and elegant weeknight meal.", 
+  image: "https://violifefoods.com/wp-content/uploads/2017/09/5803_AW_USA_Violife_WEDGE_Parmesan_150g_1.0_Folder_550x500.png", 
+  link: "https://violifefoods.com/us/product/just-like-parmesan-wedge/", 
+  category_id: 7,
+  brand_id: 2
+)
+
+# Daiya
+NonDairyOption.create(
+  name: "Cutting Board Cheddar Shreds", 
+  description: "Three cheers for Cutting Board Cheddar Style Shreds. One cheer for the full, refined artisan flavor. Another cheer for the ultra cheezy texture that complements all your favorite meals. And a final huge cheer for a melt so ooey and gooey your heart may melt out of pure plant-based love.", 
+  allergens: "coconut",
+  recommendations: `A classic. Although it has the distinct "Daiya" taste, this stuff is the OG and will always have a place in my heart. While it's not my go-to option anymore, it's still great on nachos, burgers, in grilled cheese, etc - just make sure you melt it! I do not recommend it cold out of the package ever. But it's easily available and for that, I am forever grateful!`, 
+  image: "https://daiyafoods.com/wp-content/uploads/2017/06/00321US-Daiya-Cutting-Board-Shreds-Cheddar-Style-7.1-oz-200-g-v1.00-WEB_Tight.png", 
+  link: "https://daiyafoods.com/our-foods/shreds/cheddar-cutting-board-shreds/", 
+  category_id: 6,
+  brand_id: 6
+)
+
+NonDairyOption.create(
+  name: "Cutting Board Cheddar & Mozz Blend Shreds", 
+  description: "Daiya has gone and made a good thing better. Not only is the Cheddar & Mozza blend now made with chickpea protein, but the new-and-improved recipe gives each bite the best taste, texture and flavor yet. You might even think it’s dairy cheese, but we can assure you, this blend is still dairy-free as can be.", 
+  allergens: "coconut",
+  recommendations: "Okay hear me out - these shreds are great melted overtop of a hotdog (might I recommend Field Roast for those?). First had a hotdog like that at Sticky Finger's bakery in DC and I've been obsessed ever since!", 
+  image: "https://daiyafoods.com/wp-content/uploads/2020/03/00326US-Daiya-Cutting-Board-Shreds-Cheddar-Mozza-Style-Blend-7.1-oz-200-g-v0.00-WEB_Tight.png", 
+  link: "https://daiyafoods.com/our-foods/shreds/cheddar-mozza-blend-cutting-board-shreds/", 
+  category_id: 6,
+  brand_id: 6
+)
+
+NonDairyOption.create(
+  name: "Cutting Board Mozzarella Shreds", 
+  description: "Artisan excellence. That’s the driving force behind Daiya's Cutting Board Collection. Deliciously dairy-free and plant-based, Cutting Board Mozzarella Style Shreds give cheese lovers the very finest in taste and texture. Better pizzas, better pastas, better I’ll-have-seconds-please. A classic melt every time.", 
+  allergens: "coconut",
+  recommendations: `Daiya's cutting board shreds are much better than their regular ones - they've come a long way since they first came about. Daiya does have a distinct "Daiya" taste, and I do recommend that you should only use them if you're going to melt them down (like on top of pizza or in a lasagna).`, 
+  image: "https://daiyafoods.com/wp-content/uploads/2017/06/00320US-Daiya-Cutting-Board-Shreds-Mozzarella-Style-7.1-oz-200-g-v1.00-WEB_Tight.png", 
+  link: "https://daiyafoods.com/our-foods/shreds/mozzarella-cutting-board-shreds/", 
+  category_id: 6,
+  brand_id: 6
+)
+
+NonDairyOption.create(
+  name: "Cutting Board Spicy Monterey Jack Shreds", 
+  description: "The perfect pepperjack balances the rich, smooth depth of Monterey Jack with the vivid highlights of chile peppers. Introducing Cutting Board Spicy Monterey Jack Style Shreds. Enjoy the artisan cheezy goodness anywhere you want a flavor boost, from dairy-free nachos to a lively breakfast casserole.", 
+  allergens: "coconut",
+  recommendations: "Nachos, burritos, tacos, enchiladas - this is the best vegan cheese pairing to go with all of those! Also great for pizzas and pastas if you're trying to add some extra zing!", 
+  image: "https://daiyafoods.com/wp-content/uploads/2017/06/00322US-Daiya-Cutting-Board-Shreds-Spicy-Monterey-Jack-Style-7.1-oz-200-g-v101-WEB.png", 
+  link: "https://daiyafoods.com/our-foods/shreds/pepperjack-cutting-board-shreds/", 
+  category_id: 6,
+  brand_id: 6
+)
+
+# Parmela
+NonDairyOption.create(
+  name: "Sharp Cheddar Shreds", 
+  description: "Sharp Cheddar, the OG cheese but cranked up a notch, aged 60 days to bring out deep and sharp flavor, a necessity for nachos, a topper for tacos.", 
+  allergens: "cashews, coconut",
+  recommendations: "No joke - take a handful of these shreds and a splash of your favorite (non-dairy!) milk and heat up in a bowl in the microwave, and you've got a super quick and easy cheese dip for chips, bread, and more!", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/sc-shred.png", 
+  link: "https://www.parmelacreamery.com/products/shreds/sharp-cheddar-shreds", 
+  category_id: 6,
+  brand_id: 7
+)
+
+NonDairyOption.create(
+  name: "Mild Cheddar Shreds", 
+  description: "Mild Cheddar, mellow flavor and smooth texture, your childhood cheese but plant-based, perfect for a loaded baked potato or the creamiest mac ‘n’ cheese.", 
+  allergens: "cashews, coconut",
+  recommendations: "Just like the description says - one of my favorite cheeses for making an amazingly creamy (and cheesey!) vegan mac and cheese.", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/mc-shred.png", 
+  link: "https://www.parmelacreamery.com/products/shreds/mild-cheddar-shreds", 
+  category_id: 6,
+  brand_id: 7
+)
+
+NonDairyOption.create(
+  name: "Fiery Jack Shreds", 
+  description: "Fiery Jack packs a punch in the spice department, the ideal topping for revved up nachos or hearty chili.", 
+  allergens: "cashews, coconut",
+  recommendations: "Tacos and nachos are where this cheese thrives. Definitely has a kick so be careful if you're also adding any other heat to your dish. Perfect just sprinkled on top of your dish straight out of the bag, but also makes for a killer queso.", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/fj-shred.png", 
+  link: "https://www.parmelacreamery.com/products/shreds/fiery-jack-shreds", 
+  category_id: 6,
+  brand_id: 7
+)
+
+NonDairyOption.create(
+  name: "Mozzarella Shreds", 
+  description: "Fresh Cultured Mozzarella, the mellowest and creamiest of the Parmela Shreds crew, the perfect addition to a fresh pasta or decadent pizza.", 
+  allergens: "cashews, coconut",
+  recommendations: "Really good on pastas, and works pretty well with pizza (especially if you can't find Violife's mozz shreds). The shreds will tend to dry out a bit when heated in the oven if you're not careful, but that does make it easier for getting a nice crispy baked ziti crust!", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/mz-shred-2021.png", 
+  link: "https://www.parmelacreamery.com/products/shreds/mozzarella-shreds", 
+  category_id: 6,
+  brand_id: 7
 )
 
 
