@@ -43,24 +43,23 @@ puts "Creating boards 💟 💟 💟"
     )
 end
 
-puts "Creating recipes 📝 📝 📝"
-20.times do
-  Recipe.create(
-    name: Faker::Lorem.word, 
-    description: Faker::Lorem.sentence, 
-    ingredients: Faker::Food.ingredient, 
-    instructions: Faker::Food.description, 
-    user_id: User.all.ids.sample
-    )
-end
+# puts "Creating recipes 📝 📝 📝"
+# 20.times do
+#   Recipe.create(
+#     name: Faker::Lorem.word, 
+#     description: Faker::Lorem.sentence, 
+#     ingredients: Faker::Food.ingredient, 
+#     instructions: Faker::Food.description, 
+#     user_id: User.all.ids.sample
+#     )
+# end
 
 puts "Creating brands 🛒 🛒 🛒"
-50.times do
-  Brand.create(
-    name: Faker::Company.name
-  )
-end
-
+# 50.times do
+#   Brand.create(
+#     name: Faker::Company.name
+#   )
+# end
 
 Brand.create(name: "Oatly")
 Brand.create(name: "Violife")
@@ -84,15 +83,16 @@ Brand.create(name: "Follow Your Heart")
 Brand.create(name: "Chao")
 Brand.create(name: "Miyokos")
 Brand.create(name: "Treeline")
-# 19
+Brand.create(name: "Ben & Jerry's")
+# 20
 
 puts "Creating categories 🥛 🧀 🥯"
-10.times do
-  Category.create(
-    name: Faker::Food.ingredient,
-    product_type: "non-dairy product"
-  )
-end
+# 10.times do
+#   Category.create(
+#     name: Faker::Food.ingredient,
+#     product_type: "non-dairy product"
+#   )
+# end
 
 Category.create(name: "milk", product_type: "refrigerated carton")
 Category.create(name: "milk", product_type: "shelf-stable carton")
@@ -113,18 +113,17 @@ Category.create(name: "ice cream", product_type: "carton")
 Category.create(name: "ice cream", product_type: "soft-serve")
 # 13
 
-
 puts "Creating non-dairy options 🍦 🍦 🍦"
-50.times do
-  NonDairyOption.create(
-    name: Faker::Food.ingredient,
-    description: Faker::Lorem.sentence, 
-    allergens: Faker::Food.ingredient, 
-    image: Faker::Avatar.image, 
-    category_id: Category.all.ids.sample, 
-    brand_id: Brand.all.ids.sample
-  )
-end
+# 50.times do
+#   NonDairyOption.create(
+#     name: Faker::Food.ingredient,
+#     description: Faker::Lorem.sentence, 
+#     allergens: Faker::Food.ingredient, 
+#     image: Faker::Avatar.image, 
+#     category_id: Category.all.ids.sample, 
+#     brand_id: Brand.all.ids.sample
+#   )
+# end
 
 # Oatly
 NonDairyOption.create(
@@ -168,6 +167,61 @@ NonDairyOption.create(
   image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Chocolate-Chilled-Oatmilk-32oz.jpg?v=1618612104", 
   link: "https://us.oatly.com/collections/products/products/chocolate-oatmilk-chilled", 
   category_id: 1,
+  brand_id: 1
+)
+
+NonDairyOption.create(
+  name: "Original Oatmilk Ice Cream", 
+  description: "This is the greatest-tasting oatmilk in the history of the planet — frozen, of course, and without anything allowed to interfere with it being the greatest tasting oatmilk in the history of the planet — frozen, of course. It’s not only proof that keeping things simple is the key to happiness (or at least a nice-tasting dessert), it is a bit of a phenomenon in that this flavor is not currently available anywhere in the world except the US. So if you have friends in Sweden, where Oatly products are as ubiquitous as blond liberals, it’s cool if you want to leave this product webpage and go let them know they are totally missing out.", 
+  allergens: "oats, coconut",
+  recommendations: "Great solid oatmilk ice cream, but surprisingly enough it does taste more like oats than the regular milk! Definitely not a bad thing - just something to note if you don't want your ice cream to feel like a frozen bowl of oatmeal ;)", 
+  image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Frozen-Dessert-Oat.jpg?v=1613157247", 
+  link: "https://us.oatly.com/collections/products/products/oat-frozen-dessert",  
+  category_id: 11,
+  brand_id: 1
+)
+
+NonDairyOption.create(
+  name: "Vanilla Oatmilk Ice Cream", 
+  description: "Go straight for the vanilla. Nice choice. If you can taste a pod of vanilla without picking up any influences from the frosting on little Jimmy’s birthday cake, you can be pretty sure the entire line-up is going to be great. But let’s keep the focus on the vanilla. The flavor is bold and handsome with this one, made with real vanilla seeds, natural vanilla flavor and a hint of sea salt — all of which complement the subtlety of the oats perfectly. Feeling like a midnight snack? Pull the carton out of your freezer at 11:59 and scoop away without any sitting-out-on-the-counter nonsense. Because a 12:22 a.m. snack isn’t a thing.", 
+  allergens: "oats, coconut",
+  recommendations: "You can never go wrong with vanilla ice cream, and this one is no exception! It does have hints of the oat-y taste in it, but to me that just means it pairs even better with some cinnamon and caramel!", 
+  image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Frozen-Dessert-Vanilla.jpg?v=1613157120", 
+  link: "https://us.oatly.com/collections/products/products/vanilla-frozen-dessert",  
+  category_id: 11,
+  brand_id: 1
+)
+
+NonDairyOption.create(
+  name: "Strawberry Oatmilk Ice Cream", 
+  description: "It’s strawberries and oats, both grown from the soil of the earth, together in ice cold community. No synthetic flavors dressed up as strawberries or cream or pirates or whatever.", 
+  allergens: "oats, coconut",
+  recommendations: "If you're someone who goes straight for the pink strawberry ice cream when your parents would get that carton of Neopolitan, then I highly recommend this one for you! Definitely one of the best strawberry ice creams I've had, and this one does not taste like oats!", 
+  image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Frozen-Dessert-Strawberry.jpg?v=1613157161", 
+  link: "https://us.oatly.com/collections/products/products/strawberry-frozen-dessert",  
+  category_id: 11,
+  brand_id: 1
+)
+
+NonDairyOption.create(
+  name: "Chocolate Oatmilk Ice Cream", 
+  description: "This one deploys a bold chocolate flavor that lets you know at first spoonful that it would like to extend a hand and make a proper introduction. To be slightly more specific, Joakim — our product development lead who moved from Malmo to New Jersey in order to bring his genius Oatly product innovation secrets to the US — says it tastes like a frozen creamy ganache of chocolate, without any malty/chocolate milk powder distractions. And that’s straight from the guy who created it, not website-writer-person marketing hype. So when you taste it, feel free to whisper “Thank you, Joakim” or, you know, whatever feels natural.", 
+  allergens: "oats, coconut",
+  recommendations: "Take the carton out of the freezer and start scooping away. Yes, the “sitting out on the counter” step has been innovated out of the vegan frozen dessert equation. Welcome to the future.", 
+  image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Frozen-Dessert-Chocolate.jpg?v=1613157346", 
+  link: "https://us.oatly.com/collections/products/products/chocolate-frozen-dessert",  
+  category_id: 11,
+  brand_id: 1
+)
+
+NonDairyOption.create(
+  name: "Mint Chip Oatmilk Ice Cream", 
+  description: "The amazing result here is a mint chip that tastes leafy green and remains fresh while its cooling sensation is fused into some dark, contrasty chocolate chips that are actually square — more like chocolate chunks, really — as it proudly refuses to resemble anything close to an after-dinner mint. And that was the intention. So, it’s probably worth noting that any super-dramatic copy you encounter on this page could be due the fact that this one is the web-writer-person’s favorite. But seriously, you should try it. Trust me.", 
+  allergens: "oats, coconut",
+  recommendations: "It's a solid mint chocolate chip ice cream. Is it green though? No. So for that, it loses points. Yes, I am green mint chocolate chip ice cream snob. Mint chip ice cream is just better when it's green, and that's a hill I will die on.", 
+  image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Frozen-Dessert-Mint-Chip.jpg?v=1613157276", 
+  link: "https://us.oatly.com/collections/products/products/mint-chip-frozen-dessert",  
+  category_id: 11,
   brand_id: 1
 )
 
@@ -335,6 +389,50 @@ NonDairyOption.create(
   image: "https://sodeliciousdairyfree.com/wp-content/uploads/2019/02/Bev_Aspt_Ccnt_32oz_UnswVan_sm.png", 
   link: "https://sodeliciousdairyfree.com/dairy-free-foods/plant-based-beverages/coconutmilk/unsweetened-vanilla-32oz", 
   category_id: 2,
+  brand_id: 4
+)
+
+NonDairyOption.create(
+  name: "Snickerdoodle Ice Cream", 
+  description: "Gluten-free snickerdoodle cookie dough paired with smooth cashewmilk. Delicious and dairy-free. Spoon drop.", 
+  allergens: "cashews, coconut",
+  recommendations: "If you like snickerdoodles (or really, if you like cinnamon) and if you like ice cream - this pint is for you. It's the perfect dessert for when you really want freshly baked snickerdoodles but it's just too hot (looking at you, DC summertime!) and you'd rather have something cool ya down!", 
+  image: "https://cdn.shopify.com/s/files/1/0445/7912/7456/products/00744473476176_CF_A1N1_JPEG_3_800x.jpg?v=1601326437", 
+  link: "https://shop.sodeliciousdairyfree.com/products/snickerdoodle-cashewmilk-frozen-dessert", 
+  category_id: 11,
+  brand_id: 4
+)
+
+NonDairyOption.create(
+  name: "Dark Chocolate Truffle Ice Cream", 
+  description: "Rich, organic chocolate and decadent fudge blended with oh-so-smooth cashewmilk. Get ready to dream in dairy-free.", 
+  allergens: "cashews, coconut",
+  recommendations: "Folks who have a monthly (or really anytime) craving for chocolate - pick up one (or 5) of these pints. Chocolate ice cream is good, but this one is even better. And that's saying something because I'm not usually a chocolate person. Just only when the time strikes.", 
+  image: "https://cdn.shopify.com/s/files/1/0445/7912/7456/products/00744473476213_CF_A1N1_JPEG_3_800x.jpg?v=1601330260", 
+  link: "https://shop.sodeliciousdairyfree.com/products/dark-chocolate-truffle-cashewmilk-frozen-dessert", 
+  category_id: 11,
+  brand_id: 4
+)
+
+NonDairyOption.create(
+  name: "Peanut Butter and Raspberry Ice Cream", 
+  description: "Smooth peanut butter and juicy black raspberries blended in our creamy oatmilk frozen dessert. It’s feel-like-a-kid-again delicious.", 
+  allergens: "oats, peanuts, coconut",
+  recommendations: "Okay for those who don't know - I am the BIGGEST peanut butter & jelly fan you'll meet. It's even my go-to protein smoothie flavor. So it's no surprise that I had to try this ice cream and OH BOY does it live up to the hype. When I had to get my wisdom teeth out and couldn't eat solid foods for a hot minute, you know I had some of these pints stocked at the ready. Probably wouldn't be bad used in an actual PB&J sandwich either!", 
+  image: "https://cdn.shopify.com/s/files/1/0445/7912/7456/products/00036632073334_CF_A1N1_JPEG_3_800x.jpg?v=1601413676", 
+  link: "https://shop.sodeliciousdairyfree.com/products/peanut-butter-and-raspberry-oatmilk-frozen-dessert", 
+  category_id: 11,
+  brand_id: 4
+)
+
+NonDairyOption.create(
+  name: "Creamy Vanilla Ice Cream", 
+  description: "Oh-so smooth vanilla flavor paired with soymilk in a creamy, delicious quart. That’s the art of dairy-free.", 
+  allergens: "soy",
+  recommendations: "This is one of those ice cream flavors that will always have a place in my heart because it's been around since I first went vegan in 2009. Don't hate on the fact that it's soy milk based - this ice cream is perfect in every way. Simply vanilla, and goes with anything you want to put ice cream with (so... anything!). I use this one to make homemade ice cream sandwiches and have yet to be disappointed.", 
+  image: "https://sodeliciousdairyfree.com/wp-content/uploads/2019/02/creamy-vanilla-soymilk-frozen-dessert.png", 
+  link: "https://sodeliciousdairyfree.com/dairy-free-foods/dairy-free-frozen-desserts/soymilk/creamy-vanilla", 
+  category_id: 11,
   brand_id: 4
 )
 
@@ -563,6 +661,219 @@ NonDairyOption.create(
   brand_id: 7
 )
 
+NonDairyOption.create(
+  name: "Sharp Cheddar Slices", 
+  description: "Sharp Cheddar, the OG cheese but cranked up a notch, aged 60 days to bring out deep and sharp flavor, a surefire way to complete the perfect sandwich or wrap.", 
+  allergens: "cashews, coconut",
+  recommendations: "Burgers. This is where this cheese thrives. Personally recommend it with Impossible burgers, but also just as good with Beyond Burgers or others!", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/sc-slice.png", 
+  link: "https://www.parmelacreamery.com/products/slices/sharp-cheddar-slices", 
+  category_id: 6,
+  brand_id: 7
+)
+
+NonDairyOption.create(
+  name: "Mild Cheddar Slices", 
+  description: "Mild Cheddar, mellow flavor and smooth texture, your childhood cheese but plant-based, perfect for a summertime plant-based hot dog or a classic grilled cheese.", 
+  allergens: "cashews, coconut",
+  recommendations: "Can't go wrong with what the description says - these slices make for a beautiful grilled cheese.", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/mc-slice.png", 
+  link: "https://www.parmelacreamery.com/products/slices/mild-cheddar-slices-2", 
+  category_id: 6,
+  brand_id: 7
+)
+
+NonDairyOption.create(
+  name: "Creamy American Slices", 
+  description: "Creamy American takes creamy richness to a whole new level, made for top-notch grilled cheeses and over-the-top vegan omelettes.", 
+  allergens: "cashews, coconut",
+  recommendations: "Okay so I have recently discovered Sweet Earth's vegan ham slices and those are AMAZING, even straight out of the package (no heating required!). Now take two slices of your favorite bread (hello Dave's killer), some of that vegan ham, and then a couple of these American slices and you've got yourself a perfect vegan ham & cheese. These slices are amazing straight out of the package (also no heating required!) and make me very nostalgic for having packed lunches made for school.", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/ca-slice.png", 
+  link: "https://www.parmelacreamery.com/products/slices/creamy-american-slices", 
+  category_id: 6,
+  brand_id: 7
+)
+
+NonDairyOption.create(
+  name: "Fiery Jack Slices", 
+  description: "Fiery Jack packs a punch in the spice department, adding balance to the cheese’s natural creaminess, perfect for a burrito at breakfast and a burger for dinner.", 
+  allergens: "cashews, coconut",
+  recommendations: "Also highly recommend these for burgers, especially if you want the extra kick! Also great to snack on right out the package with some Ritz crackers. 10/10.", 
+  image: "https://www.parmelacreamery.com/wp-content/uploads/ca-slice.png", 
+  link: "https://www.parmelacreamery.com/products/slices/creamy-american-slices", 
+  category_id: 6,
+  brand_id: 7
+)
+
+# Miyokos
+NonDairyOption.create(
+  name: "Cashew Milk Mozzarella", 
+  description: "Just like traditional mozzarella di bufalo, our cashew-based vegan version is the perfect answer for everything from pizzas to caprese salads and paninis. Creamy, smooth, and perfect. Melts and Browns. Delicious Hot or Cold.", 
+  allergens: "cashews, coconut",
+  recommendations: "No need for delivery, just bring your favorite pizzeria into your kitchen
+  with Miyoko's vegan mozz and her overnight pizza dough (from her book The Homemade Vegan Pantry!).", 
+  image: "https://cdn.shopify.com/s/files/1/0581/9545/products/Miyokos-Mozzarella-Fresh-Web_540x.jpg?v=1610149487", 
+  link: "https://miyokos.com/products/fresh-vegan-mozzarella-cheese", 
+  category_id: 9,
+  brand_id: 18
+)
+
+NonDairyOption.create(
+  name: "Smoked Cashew Milk Mozzarella", 
+  description: "Miyoko's smokey vegan mozzarella will add savory depth to everything from bruschetta to panini and risotto. Wood-fire smoked, it’s creamy and delicious.", 
+  allergens: "cashews, coconut",
+  recommendations: "A warm baguette, some fresh basil, some sliced cherry tomatoes, and some of this smokey cashew mozz will be your new favorite summer snack. Pair with a glass of rosé and you're golden!", 
+  image: "https://cdn.shopify.com/s/files/1/0581/9545/products/Miyokos-Mozzarella-Smoked-Web_540x.jpg?v=1610149544", 
+  link: "https://miyokos.com/products/smoked-vegan-mozzarella-cheese", 
+  category_id: 9,
+  brand_id: 18
+)
+
+NonDairyOption.create(
+  name: "Double Cream Classic Chive Cheese", 
+  description: "Buttery, Savory, Creamy Chive Flavor. Delicious on crackers, in a sandwich or melted on potatoes.", 
+  allergens: "cashews, coconut",
+  recommendations: "This is hands down my favorite soft vegan cheese. Give me a block of wheel of this cheese and a freshly baked baguette and I'll be set for an afternoon (especially if any wine is also involved!). On the pricier side, but 100% worth it if you can get your hands on it. We always have a wheel (or 3) of Miyoko's cheese wheels when we host people for dinner. Perfect appetizer!", 
+  image: "https://cdn.shopify.com/s/files/1/0581/9545/products/miyokos_DCC_new_packaging_540x.png?v=1605912020", 
+  link: "https://miyokos.com/products/classic-double-cream-chive-cheese", 
+  category_id: 8,
+  brand_id: 18
+)
+
+NonDairyOption.create(
+  name: "Double Cream Sundried Tomato Garlic Cheese", 
+  description: "Creamy & robust with deep Mediterranean flavor. Great on crackers or melted on pasta.", 
+  allergens: "cashews, coconut",
+  recommendations: "This is my second favorite soft vegan cheese, barely being beat out by Miyoko's Double Cream Classic Chive cheese wheel. But similarly - give me a block of wheel of this cheese and a freshly baked baguette and I'll be set But, I do also really love this cheese with some water crackers, or even Ritz crackers.", 
+  image: "https://cdn.shopify.com/s/files/1/0581/9545/products/miyokos_SDT_new_packaging_540x.png?v=1605912342", 
+  link: "https://miyokos.com/products/sun-dried-tomato-garlic-cheese", 
+  category_id: 8,
+  brand_id: 18
+)
+
+NonDairyOption.create(
+  name: "Aged Smoked English Farmhouse Cheese", 
+  description: "An aged, semi-hard cheese with robust flavor & smoky sharpness. Serve with crackers in a sandwich, or in sauces.", 
+  allergens: "cashews, coconut",
+  recommendations: "This cheese has got a great smokey and creamy flavor all on its own, so it definitely pairs better with something more neutral like some water crackers or such.", 
+  image: "https://cdn.shopify.com/s/files/1/0581/9545/products/miyokos_SFH_new_packaging_540x.png?v=1605912435", 
+  link: "https://miyokos.com/products/smoked-farmhouse-cheese", 
+  category_id: 9,
+  brand_id: 18
+)
+
+NonDairyOption.create(
+  name: "Sharp English Farmhouse Cheese", 
+  description: "Hard & aged with sharp complex flavors. Enjoy with crackers or melted into a sauce.", 
+  allergens: "cashews, coconut",
+  recommendations: "A slightly harder (and less smokey!) version of Miyoko's aged smoked english farmhouse cheese. Pairs well with crackers or bread, and also goes along well with a dry white wine. If you've ever been to Roots Market in Olney or Clarksville, MD, they've even got some perfect wine recommendations to go along with these cheese. Cheers!", 
+  image: "https://cdn.shopify.com/s/files/1/0581/9545/products/miyokos_SFH_new_packaging_540x.png?v=1605912435", 
+  link: "https://miyokos.com/products/smoked-farmhouse-cheese", 
+  category_id: 9,
+  brand_id: 18
+)
+
+# Nada Moo
+NonDairyOption.create(
+  name: "Mint Chip Ice Cream", 
+  description: "If it ain't broke, don't mess with the recipe. Nada Mo's original flavor is still one of the most popular, with creamy, crunchy mint chocolately goodness.", 
+  allergens: "coconut",
+  recommendations: "My favorite ice cream, hands down. Green mint chocolate chip ice cream is my favorite, and Nada Moo's a) tastes AMAZING and b) is actually GREEN! It brings back all of the homey nostalgic feelings, and this pint is one of the few that never lasts more than 10 mintues in my house. ⭐️ ⭐️ ⭐️ ⭐️ ⭐️", 
+  image: "https://target.scene7.com/is/image/Target/GUEST_0273fd28-6a58-4ffe-a563-384283988cca?fmt=webp&wid=1400&qlt=80", 
+  link: "https://nadamoo.com/products/organic-mint-chip", 
+  category_id: 11,
+  brand_id: 8
+)
+
+NonDairyOption.create(
+  name: "Rockiest Road Ice Cream", 
+  description: "The rockier the road, the more rewarding the trip. With chocolate cookie crumbles, crunch almonds, and twirly swirly marshmallow, this ice cream is the rockiest!", 
+  allergens: "coconut, soy, almonds",
+  recommendations: "Best rocky road ice cream I've ever had. Vegan marshmallows weren't a real thing for the longest time, but as soon as they were - Nada Moo was on it with this amazing ice cream. I may or may not be the worst person to share this one with because I will pick all the marshmallows out (sorry not sorry!).", 
+  image: "https://i5.walmartimages.com/asr/7bc820b4-02de-460c-92b3-dd1ab2bc964d.7809ea250e6830d409ecf2d85bda79c2.png?odnWidth=undefined&odnHeight=undefined&odnBg=ffffff", 
+  link: "https://nadamoo.com/products/rockiest-road", 
+  category_id: 11,
+  brand_id: 8
+)
+
+
+NonDairyOption.create(
+  name: "Vanilla Bean Ice Cream", 
+  description: "There's nothing 'vanilla' about this class vanilla. (Well, except the organ vanilla beans - they're very vanilla!).", 
+  allergens: "coconut",
+  recommendations: "There's nothing wrong with some plain vanilla ice cream, but why not at least go for the best if you're going to keep it simple? Great on its own and pairs even better with some fresh baked cookies.", 
+  image: "https://target.scene7.com/is/image/Target/GUEST_8200651d-a908-4491-a3f9-6919b9c57b46?fmt=webp&wid=1400&qlt=80", 
+  link: "https://nadamoo.com/products/organic-vanilla-bean", 
+  category_id: 11,
+  brand_id: 8
+)
+
+NonDairyOption.create(
+  name: "Marshmallow Stardust Ice Cream", 
+  description: "We're 98.7% sure a rainbow tastes like an explosion of confetti sprinkles, raspberry, and mashmallowy-ness. (But don't quote us on that math.)", 
+  allergens: "coconut",
+  recommendations: "This ice cream is one of a kind and because of that's, it's super hard to find! Thankfully my good friend Taylor at Nada Moo (hi Taylor!) shipped me some and now I'm just upset it's all gone. It's a super colorful ice cream that might make you think from the looks of it that it's all over the place, but the vanilla ice cream, marshmallows, and rasbperry ribbons blend perfectly. Also Nada Moo even recommends it with some cereal for a breakfast parfait, and I am obviously here for that.", 
+  image: "https://cdn.shopify.com/s/files/1/0315/8766/3917/products/marshmallow-stardust-3x_525x.png?v=1589902724", 
+  link: "https://nadamoo.com/products/marshmallow-stardust", 
+  category_id: 11,
+  brand_id: 8
+)
+
+NonDairyOption.create(
+  name: "Birthday Cake Cookie Dough Ice Cream", 
+  description: "Your wildest dreams are throwing a party, and all your favorite foods are invited. Grab your taste buds and get ready for a great time!", 
+  allergens: "coconut",
+  recommendations: "I think the name alone speaks for itself. The combo of cookie dough and birthday cake, in ice cream form, is just something everyone needs to try at least once. This ice cream is also perfect for making ice cream birthday cakes with, so get on that! (Or use it to make un-birthday cakes, if you need a different excuse!)", 
+  image: "https://cdn.shopify.com/s/files/1/0315/8766/3917/products/birthday-cake-cookie-dough-3x_525x.png?v=1589902593", 
+  link: "https://nadamoo.com/products/birthday-cake-cookie-dough", 
+  category_id: 11,
+  brand_id: 8
+)
+
+# Ben & Jerry's
+NonDairyOption.create(
+  name: "Phish Food® Ice Cream", 
+  description: "Chocolate Non-Dairy Frozen Dessert With Gooey Marshmallow Swirls, Caramel Swirls & Fudge Fish. What's not to love?", 
+  allergens: "almonds, soy",
+  recommendations: "Okay so Phish Food® was my favorite Ben & Jerry's flavor growing up, and one of the flavors I missed the most when I first went vegan in 2009. Now in 2021, we have vegan Phish Food®, and my life is complete. Tastes just like the original, and I am the worst person to share this with because I will steal all the little chocolate phish! No regrets!", 
+  image: "https://www.benjerry.com/files/live/sites/systemsite/files/flavors/products/us/pint/phish-food-non-dairy-detail-open.png", 
+  link: "https://www.benjerry.com/flavors/phish-food-non-dairy/pint", 
+  category_id: 11,
+  brand_id: 20
+)
+
+NonDairyOption.create(
+  name: "PB & Cookies Ice Cream", 
+  description: "Vanilla Non-Dairy Frozen Dessert with Chocolate Sandwich Cookies & Crunchy Peanut Butter Swirls. It's like oreos and peanbutter had an ice cream baby and we couldn't be more thankful.", 
+  allergens: "almonds, soy, peanuts, coconut, wheat",
+  recommendations: "Did you know oreos are vegan? Did you know peanut butter doesn't have any real butter in it? Now did you know if you mix the two together in ice cream form, you get a beautiful creation? Well if you didn't, now you do! Great straight out of the pint, but also works beautifully in ice cream cake form (with chocolate fudge cake, might I add!).", 
+  image: "https://www.benjerry.com/files/live/sites/systemsite/files/flavors/products/us/pint/pb-and-cookies-non-dairy-detail-open.png", 
+  link: "https://www.benjerry.com/flavors/pb-and-cookies-non-dairy/pint", 
+  category_id: 11,
+  brand_id: 20
+)
+
+NonDairyOption.create(
+  name: "Mint Chocolate Cookie Ice Cream", 
+  description: "Mint Non-Dairy Frozen Dessert with Chocolate Sandwich Cookies. Mint chocolate chip ice cream meets oreos, and we can't complain.", 
+  allergens: "soy, coconut, wheat", 
+  recommendations: "Straight out of the carton, and also pairs really well with more oreos (especially the Mint Oreo thins!). It's kind of like Thin Mint cookies in ice cream form, but not all chocolate - it's got some of that good vanilla in there too! Saddest part is that it's not green like mint ice cream should be ;)", 
+  image: "https://www.benjerry.com/files/live/sites/systemsite/files/flavors/products/us/pint/mint-chocolate-cookie-nd-detail.png", 
+  link: "https://www.benjerry.com/flavors/mint-chocolate-cookie-non-dairy/pint", 
+  category_id: 11,
+  brand_id: 20
+)
+
+NonDairyOption.create(
+  name: "Chocolate Chip Cookie Dough Ice Cream", 
+  description: "Vanilla Non-Dairy Frozen Dessert with Gobs of Chocolate Chip Cookie Dough & Fudge Flakes. A classic that you can never go wrong with.", 
+  allergens: "almonds, soy, coconut, wheat",
+  recommendations: "You’ve always wanted to taste the legend without the dairy, & now that Ben & Jerry's classic dough-loaded concoction is also a Non-Dairy flavor, you can! Ready... set... dough!", 
+  image: "https://www.benjerry.com/files/live/sites/systemsite/files/flavors/products/us/pint/choc-chip-cookie-dough-non-dairy-detail.png", 
+  link: "https://www.benjerry.com/flavors/chocolate-chip-cookie-dough-non-dairy/pint", 
+  category_id: 11,
+  brand_id: 20
+)
 
 puts "Creating board pins 🧷 🧷 🧷"
 25.times do
@@ -572,12 +883,12 @@ puts "Creating board pins 🧷 🧷 🧷"
   )
 end
 
-puts "Creating recipe pins 📌 📌 📌"
-25.times do
-  RecipePin.create(
-    non_dairy_option_id: NonDairyOption.all.ids.sample, 
-    recipe_id: Recipe.all.ids.sample
-  )
-end
+# puts "Creating recipe pins 📌 📌 📌"
+# 25.times do
+#   RecipePin.create(
+#     non_dairy_option_id: NonDairyOption.all.ids.sample, 
+#     recipe_id: Recipe.all.ids.sample
+#   )
+# end
 
 puts "Data seeded 🌼 🌼 🌼"
