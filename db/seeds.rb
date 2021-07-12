@@ -43,16 +43,16 @@ puts "Creating boards 💟 💟 💟"
     )
 end
 
-# puts "Creating recipes 📝 📝 📝"
-# 20.times do
-#   Recipe.create(
-#     name: Faker::Lorem.word, 
-#     description: Faker::Lorem.sentence, 
-#     ingredients: Faker::Food.ingredient, 
-#     instructions: Faker::Food.description, 
-#     user_id: User.all.ids.sample
-#     )
-# end
+puts "Creating recipes 📝 📝 📝"
+20.times do
+  Recipe.create(
+    name: Faker::Lorem.word, 
+    description: Faker::Lorem.sentence, 
+    ingredients: Faker::Food.ingredient, 
+    instructions: Faker::Food.description, 
+    user_id: User.all.ids.sample
+    )
+end
 
 puts "Creating brands 🛒 🛒 🛒"
 # 50.times do
@@ -128,7 +128,7 @@ puts "Creating non-dairy options 🍦 🍦 🍦"
 # Oatly
 NonDairyOption.create(
   name: "Full Fat Oatmilk", 
-  description: "So only the best is good enough, huh? Then drinking Full Fat oatmilk is for you. It’s the obvious choice when you want to swap whole cow’s milk for something good for the planet. If you use this super delicious oatmilk when you bake, your muffins, cakes and breads will come out so moist that it may not even bother you when people use the word “moist.” Pour it in your coffee or tea — it so thoughtfully stays smooth and delicious without acting weird or separating. This product actually might qualify as the best, but since it’s made of oats and oats are really humble, it will always be cool.", 
+  description: "So only the best is good enough, huh? Then drinking Full Fat oatmilk is for you. It’s the obvious choice when you want to swap whole cow’s milk for something good for the planet. If you use this super delicious oatmilk when you bake, your muffins, cakes and breads will come out so moist that it may not even bother you when people use the word 'moist.' Pour it in your coffee or tea — it so thoughtfully stays smooth and delicious without acting weird or separating. This product actually might qualify as the best, but since it’s made of oats and oats are really humble, it will always be cool.", 
   allergens: "oats",
   recommendations: "A perfect option for when you need a thicker milk for cooking or baking, and especially so if you want a nut-free and gluten-free option! Works well in smoothies, but works even better in curries!", 
   image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Full-Fat-Chilled-Oatmilk-32oz.jpg?v=1618612138", 
@@ -150,7 +150,7 @@ NonDairyOption.create(
 
 NonDairyOption.create(
   name: "Low-Fat Oatmilk", 
-  description: "Some people just prefer less fat, no matter how good the fat in question happens to be. And if you’re one of those nice people, how cool and weird is it that you’re reading this paragraph on this website at this moment about this amazing Low-Fat Oatmilk with all the flavor of beautiful gluten-free oats and only one tiny gram of unsaturated fat per serving? It also has heart-healthy beta-glucans* (big, scientific word for soluble fiber from oats) and no dairy, nuts, soy, gluten or GMOs, but right now we’re talking about less fat. Or karma. Well, whatever we’re talking about, it’s the good kind.", 
+  description: "Some people just prefer less fat, no matter how good the fat in question happens to be. And if you’re one of those nice people, how cool and weird is it that you’re reading this paragraph at this moment about this amazing Low-Fat Oatmilk with all the flavor of beautiful gluten-free oats and only one tiny gram of unsaturated fat per serving? It also has heart-healthy beta-glucans (big, scientific word for soluble fiber from oats) and no dairy, nuts, soy, gluten or GMOs, but right now we’re talking about less fat. Or karma. Well, whatever we’re talking about, it’s the good kind.", 
   allergens: "oats",
   recommendations: "The amazing low-fat cousin of Oatly's other products. Same great taste and can be used for all the same things - just with less fat and less calories!", 
   image: "https://cdn.shopify.com/s/files/1/2113/2635/products/Oatly-Low-Fat-Chilled-Oatmilk-32oz.jpg?v=1618612193", 
@@ -529,7 +529,7 @@ NonDairyOption.create(
 
 NonDairyOption.create(
   name: "Mature Cheddar Slices", 
-  description: 'For those that really miss the taste of strong cheese this is for you! It’s perfect blend of texture and tang will satisfy your cravings. Also as my husband likes to joke - these slices are "not for kids" ;)', 
+  description: "For those that really miss the taste of strong cheese this is for you! It’s perfect blend of texture and tang will satisfy your cravings. Also as my husband likes to joke - these slices are not for kids!", 
   allergens: "coconut",
   recommendations: "I know they're slices, but I highly recommend melting them down with some milk for a more decadent vegan mac and cheese. Bonus points if you mix the mature cheddar slices with the regular cheddar slices, as well as some of Violife's smoked provolone slices!", 
   image: "https://violifefoods.com/wp-content/uploads/2017/09/5809_AW_USA_Violife_SS_MatureCheddar_200g_1.0_550x500.png", 
@@ -576,7 +576,7 @@ NonDairyOption.create(
   name: "Cutting Board Cheddar Shreds", 
   description: "Three cheers for Cutting Board Cheddar Style Shreds. One cheer for the full, refined artisan flavor. Another cheer for the ultra cheezy texture that complements all your favorite meals. And a final huge cheer for a melt so ooey and gooey your heart may melt out of pure plant-based love.", 
   allergens: "coconut",
-  recommendations: `A classic. Although it has the distinct "Daiya" taste, this stuff is the OG and will always have a place in my heart. While it's not my go-to option anymore, it's still great on nachos, burgers, in grilled cheese, etc - just make sure you melt it! I do not recommend it cold out of the package ever. But it's easily available and for that, I am forever grateful!`, 
+  recommendations: "A classic. Although it has the distinct 'Daiya' taste, this stuff is the OG and will always have a place in my heart. While it's not my go-to option anymore, it's still great on nachos, burgers, in grilled cheese, etc - just make sure you melt it! I do not recommend it cold out of the package ever. But it's easily available and for that, I am forever grateful!", 
   image: "https://daiyafoods.com/wp-content/uploads/2017/06/00321US-Daiya-Cutting-Board-Shreds-Cheddar-Style-7.1-oz-200-g-v1.00-WEB_Tight.png", 
   link: "https://daiyafoods.com/our-foods/shreds/cheddar-cutting-board-shreds/", 
   category_id: 6,
@@ -598,7 +598,7 @@ NonDairyOption.create(
   name: "Cutting Board Mozzarella Shreds", 
   description: "Artisan excellence. That’s the driving force behind Daiya's Cutting Board Collection. Deliciously dairy-free and plant-based, Cutting Board Mozzarella Style Shreds give cheese lovers the very finest in taste and texture. Better pizzas, better pastas, better I’ll-have-seconds-please. A classic melt every time.", 
   allergens: "coconut",
-  recommendations: `Daiya's cutting board shreds are much better than their regular ones - they've come a long way since they first came about. Daiya does have a distinct "Daiya" taste, and I do recommend that you should only use them if you're going to melt them down (like on top of pizza or in a lasagna).`, 
+  recommendations: "Daiya's cutting board shreds are much better than their regular ones - they've come a long way since they first came about. Daiya does have a distinct 'Daiya' taste, and I do recommend that you should only use them if you're going to melt them down (like on top of pizza or in a lasagna).", 
   image: "https://daiyafoods.com/wp-content/uploads/2017/06/00320US-Daiya-Cutting-Board-Shreds-Mozzarella-Style-7.1-oz-200-g-v1.00-WEB_Tight.png", 
   link: "https://daiyafoods.com/our-foods/shreds/mozzarella-cutting-board-shreds/", 
   category_id: 6,
@@ -879,16 +879,17 @@ puts "Creating board pins 🧷 🧷 🧷"
 25.times do
   BoardPin.create(
     non_dairy_option_id: NonDairyOption.all.ids.sample, 
-    board_id: Board.all.ids.sample
+    board_id: Board.all.ids.sample,
+    favorite: false
   )
 end
 
-# puts "Creating recipe pins 📌 📌 📌"
-# 25.times do
-#   RecipePin.create(
-#     non_dairy_option_id: NonDairyOption.all.ids.sample, 
-#     recipe_id: Recipe.all.ids.sample
-#   )
-# end
+puts "Creating recipe pins 📌 📌 📌"
+25.times do
+  RecipePin.create(
+    non_dairy_option_id: NonDairyOption.all.ids.sample, 
+    recipe_id: Recipe.all.ids.sample
+  )
+end
 
 puts "Data seeded 🌼 🌼 🌼"
