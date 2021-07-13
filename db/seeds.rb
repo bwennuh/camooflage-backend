@@ -668,7 +668,7 @@ NonDairyOption.create(
   recommendations: "Burgers. This is where this cheese thrives. Personally recommend it with Impossible burgers, but also just as good with Beyond Burgers or others!", 
   image: "https://www.parmelacreamery.com/wp-content/uploads/sc-slice.png", 
   link: "https://www.parmelacreamery.com/products/slices/sharp-cheddar-slices", 
-  category_id: 6,
+  category_id: 5,
   brand_id: 7
 )
 
@@ -679,7 +679,7 @@ NonDairyOption.create(
   recommendations: "Can't go wrong with what the description says - these slices make for a beautiful grilled cheese.", 
   image: "https://www.parmelacreamery.com/wp-content/uploads/mc-slice.png", 
   link: "https://www.parmelacreamery.com/products/slices/mild-cheddar-slices-2", 
-  category_id: 6,
+  category_id: 5,
   brand_id: 7
 )
 
@@ -690,7 +690,7 @@ NonDairyOption.create(
   recommendations: "Okay so I have recently discovered Sweet Earth's vegan ham slices and those are AMAZING, even straight out of the package (no heating required!). Now take two slices of your favorite bread (hello Dave's killer), some of that vegan ham, and then a couple of these American slices and you've got yourself a perfect vegan ham & cheese. These slices are amazing straight out of the package (also no heating required!) and make me very nostalgic for having packed lunches made for school.", 
   image: "https://www.parmelacreamery.com/wp-content/uploads/ca-slice.png", 
   link: "https://www.parmelacreamery.com/products/slices/creamy-american-slices", 
-  category_id: 6,
+  category_id: 5,
   brand_id: 7
 )
 
@@ -701,7 +701,7 @@ NonDairyOption.create(
   recommendations: "Also highly recommend these for burgers, especially if you want the extra kick! Also great to snack on right out the package with some Ritz crackers. 10/10.", 
   image: "https://www.parmelacreamery.com/wp-content/uploads/ca-slice.png", 
   link: "https://www.parmelacreamery.com/products/slices/creamy-american-slices", 
-  category_id: 6,
+  category_id: 5,
   brand_id: 7
 )
 
