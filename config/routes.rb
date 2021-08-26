@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  root to: 'welcome#index'
+
   resources :recipe_pins
   resources :board_pins
   resources :non_dairy_options
