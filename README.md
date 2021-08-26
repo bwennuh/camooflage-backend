@@ -26,7 +26,11 @@ Each item instance includes its allergen information, a product description, a p
 
 As the database gets filled out, more information for each product may come in to play, so stay tuned to see what else is in store!
 
-### Follow me on Instagram for more non-dairy recommendations
+## Heroku
+
+The backend data is currently hosted with Heroku and can be found <a href="https://camooflage.herokuapp.com/">here</a>!
+
+## Follow me on Instagram for more non-dairy recommendations
 
 I mostly review vegan ice cream, but also try to do a lot of baking for vegan baked goods too!
 
